@@ -6,6 +6,7 @@ from django.utils.html import escape, mark_safe
 class User(AbstractUser):
     is_customer = models.BooleanField(default=False)
     is_sales = models.BooleanField(default=False)
+    activate = models.BooleanField(default=True)
 
 
 

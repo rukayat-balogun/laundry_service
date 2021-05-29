@@ -17,12 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from account.views import *
 
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('signup/', CustomerSignUpView.as_view(), name='sign-up-customer'),
     path('', include('account.urls')),
     path('customer/', include('customer.urls')),
     path('sales/', include('sales.urls')),
